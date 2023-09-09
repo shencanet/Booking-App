@@ -14,6 +14,9 @@ const HotelList() {
         isLoading,
         error,
     } = useQuery({ queryKey: ["hotels"], queryFn: fetchHotels})
-    if(isloading) return <div>Loading...</div>
+    if(isLoading) return <div>Loading...</div>
+    if(error) return <div>Something went wrong {error.message}</div>
+
     
+
 }
