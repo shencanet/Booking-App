@@ -13,3 +13,6 @@ Comandos
 
 instalar materia ui https://mui.com/material-ui/
 npm install @mui/material @emotion/react @emotion/styled
+
+instalar json server fake
+npm  i -D json-server

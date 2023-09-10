@@ -1,4 +1,6 @@
-import { Link, Stack, Typography } from "@mui/material";
+import { Card, CardContent, CardMedia, Link, Stack, Typography, CardActions, Button } from "@mui/material";
+import { Link } from "wouter";
+
 import { useQuery } from "@tanstack/react-query";
 
 const fetchHotels = async () => {
@@ -25,7 +27,35 @@ const HotelList() {
         <Typography variant="h4" component= "h2">Booking App</Typography>
         <Stack spacing={2}> {
             (hotels.map(hotel =>(
-                <Link key={hotel.id} component={RouterLink} to={`/hotels/${hotel.id}`}></Link>
+                <Link key={hotel.id} href={`/hotels/${hotel.id}`}>
+                    <Card sx={{ maxWidth: 345, backgroundColor: "#e8e8e8" }}>
+                        <CardMedia 
+                            sx={{ height: 140 }}
+                            image={hotel.image}
+                            title={hotel.name}
+                        />
+                        <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                            {hotel.name}
+
+
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                                {hotel.desciption}
+                        </Typography>
+
+
+                        </CardContent>
+                        <CardActions>
+                            <Button size="small">See Details</Button>
+
+
+                        </CardActions>
+
+
+
+                    </Card>
+                </Link>
             )))
         } </Stack>
 
@@ -36,3 +66,5 @@ const HotelList() {
     
 
 }
+
+export default HotelList;
