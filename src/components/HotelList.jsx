@@ -10,7 +10,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 const fetchHotels = async () => {
-	const response = await fetch("http://localhost:3001/hotels");
+	const response = await fetch("http://localhost:3001/hotel ");
 	if (!response.ok) {
 		throw new Error("Network response was not ok");
 	}
