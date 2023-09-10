@@ -16,3 +16,9 @@ npm install @mui/material @emotion/react @emotion/styled
 
 instalar json server fake
 npm  i -D json-server
+
+levantar app npm run dev y npm run server en dos ternimales distintas
+
+http://localhost:3001/hotels
+
+tendrias que ver el fichero jason
